@@ -24,6 +24,16 @@ export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(Middleware)
       .forRoutes(
+       
+       
+        {
+          path: 'user/addUser',
+          method: RequestMethod.POST
+        },
+        {
+          path: 'salary/rejectSalary',
+          method: RequestMethod.DELETE
+        },
         {
           path: 'user/getAllUser/:page/:limit',
           method: RequestMethod.GET
@@ -32,26 +42,7 @@ export class AppModule implements NestModule {
           path: 'salary/getAllUser/:page/:limit',
           method: RequestMethod.GET
         },
-        {
-          path: 'salary/updateSalary',
-          method: RequestMethod.POST
-        },
-        {
-          path: 'salary/approveSalary',
-          method: RequestMethod.POST
-        },
-        {
-          path: 'salary/getSalaryNotification',
-          method: RequestMethod.GET
-        },
-        {
-          path: 'salary/rejectSalary',
-          method: RequestMethod.DELETE
-        },
-        {
-          path: 'auth/cookiecheck',
-          method: RequestMethod.GET
-        },
+        
         {
           path: 'user/getAllUser/:page/:limit',
           method: RequestMethod.GET
@@ -69,11 +60,23 @@ export class AppModule implements NestModule {
           method: RequestMethod.GET
         },
         {
+          path: 'salary/updateSalary',
+          method: RequestMethod.POST
+        },
+        {
+          path: 'auth/cookiecheck',
+          method: RequestMethod.GET
+        },
+        {
           path: 'auth/:email',
           method: RequestMethod.GET
         },
         {
-          path: 'user/getbyrole/:role',
+          path: 'salary/approveSalary',
+          method: RequestMethod.POST
+        },
+        {
+          path: 'salary/getSalaryNotification',
           method: RequestMethod.GET
         },
         {
@@ -81,9 +84,10 @@ export class AppModule implements NestModule {
           method: RequestMethod.POST
         },
         {
-          path: 'user/addUser',
-          method: RequestMethod.POST
-        }
+          path: 'user/getbyrole/:role',
+          method: RequestMethod.GET
+        },
+        
       )
   }
 }
