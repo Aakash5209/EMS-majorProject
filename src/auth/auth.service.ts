@@ -23,6 +23,7 @@ export class AuthService {
   }
 
   async cookieCheck(req: Request, res: Response): Promise<object> {
+    console.log("req-cookie",req)
     return res.json({user: await this.userModel.find({email: req['user']['email']}).select('-password')})
   }
 
