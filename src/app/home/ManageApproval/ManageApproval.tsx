@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import UserCard from './Card/UserCard'
-import RejectModal from './Modals/RejectModal';
-import AcceptModal from './Modals/AcceptMoadel';
+import RejectModal from './Modals/Modal_Reject';
+import AcceptModal from './Modals/Modal_Accept';
 import { useDispatch, useSelector } from 'react-redux';
 import { createNotiApprovalAPIThunk } from '@/lib/store/thunk/approvalNotificationActionCreator';
 import ApprovalTable from "./ApprovalTable";

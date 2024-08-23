@@ -48,7 +48,7 @@ const RejectModal: React.FC = ({
           &times;
         </button>
         <h2 className="text-3xl font-bold mb-6 text-gray-900">
-          Rejection Reason Form
+          Rejection Form
         </h2>
         <form className="space-y-6" onSubmit={handleAddModel}>
           <div>
@@ -56,7 +56,7 @@ const RejectModal: React.FC = ({
               htmlFor="rejection-reason"
               className="block text-lg font-medium text-gray-800"
             >
-              Rejection Reason
+              Rejection Message
             </label>
             <input
               id="rejection-reason"

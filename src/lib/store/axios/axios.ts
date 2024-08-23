@@ -2,7 +2,7 @@ import axios from "axios";
 
 const Interceptor = axios.create({
     baseURL: 'http://localhost:5000',
-    // baseURL: 'https://ems-backend-a1g3.onrender.com',
+    // baseURL: 'https://ems-backend-1-agcl.onrender.com',
     withCredentials: true
 })
 
