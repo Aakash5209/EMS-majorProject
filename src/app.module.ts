@@ -25,7 +25,6 @@ export class AppModule implements NestModule {
     consumer.apply(Middleware)
       .forRoutes(
        
-       
         {
           path: 'user/addUser',
           method: RequestMethod.POST
@@ -65,6 +64,7 @@ export class AppModule implements NestModule {
         },
         {
           path: 'auth/cookiecheck',
+
           method: RequestMethod.GET
         },
         {
